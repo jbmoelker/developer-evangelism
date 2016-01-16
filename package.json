@@ -8,6 +8,7 @@
     "prebuild": "rm -rf ./dist",
     "build": "npm run build:html",
     "build:html": "node ./index.js",
+    "commit": "git-cz",
     "start": "http-server 'dist/' -c-1 -o",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,9 +16,16 @@
   "license": "MIT",
   "devDependencies": {
     "bluebird": "3.1.1",
+    "commitizen": "2.5.0",
+    "cz-conventional-changelog": "1.1.5",
     "http-server": "0.8.5",
     "mkdirp": "0.5.1",
     "nunjucks": "2.3.0",
     "x-ray": "2.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   }
 }
