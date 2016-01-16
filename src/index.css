@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.app-header {
+    border-bottom: 1px solid black;
+}
+
+.app-footer {
+    border-top: 1px solid black;
+}
+
+.toc ol {
+    list-style: none;
+    padding-left: 0;
+}
+.toc a {
+    display: inline-block;
+    padding: .25em 0;
+}
+
+.example,
+.tip {
+    padding: 1em;
+    border: 1px solid lightgray;
+}
