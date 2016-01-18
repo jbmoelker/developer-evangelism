@@ -1,0 +1,82 @@
+[
+	{
+		"title": "The developer evangelism handbook",
+		"url": "http://developer-evangelism.com/handbook.php",
+		"slug": "handbook"
+	},
+	{
+		"title": "Remove the brand",
+		"url": "http://developer-evangelism.com/brand-and-competition.php",
+		"slug": "brand-and-competition"
+	},
+	{
+		"title": "Work with your own company",
+		"url": "http://developer-evangelism.com/internal.php",
+		"slug": "internal"
+	},
+	{
+		"title": "Prepare for outreach",
+		"url": "http://developer-evangelism.com/outreach.php",
+		"slug": "outreach"
+	},
+	{
+		"title": "Travel and conference participation",
+		"url": "http://developer-evangelism.com/travel-confs.php",
+		"slug": "travel-confs"
+	},
+	{
+		"title": "Get speaking opportunities",
+		"url": "http://developer-evangelism.com/speaking-opportunities.php",
+		"slug": "speaking-opportunities"
+	},
+	{
+		"title": "Deliver a talk or workshop",
+		"url": "http://developer-evangelism.com/delivery.php",
+		"slug": "delivery"
+	},
+	{
+		"title": "How to keep a talk on time",
+		"url": "http://developer-evangelism.com/time.php",
+		"slug": "time"
+	},
+	{
+		"title": "Write great posts and articles",
+		"url": "http://developer-evangelism.com/writing.php",
+		"slug": "writing"
+	},
+	{
+		"title": "Write excellent code examples",
+		"url": "http://developer-evangelism.com/code.php",
+		"slug": "code"
+	},
+	{
+		"title": "Prepare great slide decks for presentations",
+		"url": "http://developer-evangelism.com/slides.php",
+		"slug": "slides"
+	},
+	{
+		"title": "Record your output",
+		"url": "http://developer-evangelism.com/record.php",
+		"slug": "record"
+	},
+	{
+		"title": "Know and use the (social) web",
+		"url": "http://developer-evangelism.com/web.php",
+		"slug": "web"
+	},
+	{
+		"title": "Work with the conference buzz",
+		"url": "http://developer-evangelism.com/conferences.php",
+		"slug": "conferences"
+	},
+	{
+		"title": "Additional presentation tips",
+		"url": "http://developer-evangelism.com/tips.php",
+		"slug": "tips"
+	},
+	{
+		"title": "Thanks!",
+		"url": "http://developer-evangelism.com/thanks.php",
+		"slug": "thanks"
+	}
+]
