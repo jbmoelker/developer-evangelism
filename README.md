@@ -6,6 +6,7 @@ Copy of [developer-evangelism.com](http://developer-evangelism.com).
 
 * Build a copy using `npm run build`.
 * Serve app using `npm start`.
+* Commit in [conventional-changelog](https://github.com/ajoslin/conventional-changelog/blob/master/conventions/angular.md) format using `npm run commit`.
 
 ## To do
 
