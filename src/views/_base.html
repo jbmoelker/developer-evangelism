@@ -23,7 +23,7 @@
 
 <footer role="contentinfo" class="app-footer">
     {# fetch from developer-evangelism instead of hard-coded #}
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="icons/88x31.png"></a>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/2.0/uk/88x31.png"></a>
     <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">The Developer Evangelist Handbook</span> by <address class="vcard">
     <a class="fn" xmlns:cc="http://creativecommons.org/ns#" href="http://icant.co.uk" property="cc:attributionName" rel="cc:attributionURL">Christian Heilmann</a> (<a href="mailto:onlinetoolsorg@gmail.com" class="email">email</a>),
     a <span class="title">international developer evangelist</span> living and working in <span class="adr"><span class="locality">London</span>, <span class="country-name">England</span></span></address>
@@ -32,6 +32,12 @@
     <a href="http://twitter.com/codepo8" id="twitter">I answer on Twitter!</a>
 </footer>
 
-{% block scripts %}{% endblock %}
+{% block scripts %}
+<script>
+(function(){
+    {% include "index.js" %}
+}());
+</script>
+{% endblock %}
 </body>
 </html>
