@@ -1,16 +1,23 @@
 sudo: false
 language: node_js
 node_js:
-  - "5.0"
+- '5.0'
 cache:
   directories:
-    - node_modules
+  - node_modules
 branches:
   only:
-    - master
+  - master
 notifications:
   email: false
 before_script:
-  - npm prune
+- npm prune
 script:
-  - npm run build
+- npm run build
+after_script:
+- bash ./lib/deploy.sh
+env:
+  global:
+  - GH_USER: jbmoelker
+  - GH_REPO: developer-evangelism
+  - secure: R3kCbrnxwhlSO+LMVUt0Zf0FY80m9TmfJupohY4fbl2svip/s59Kmsbneo2Tg7SJJ94BGCD4nCe6jY7E6QP8GStedO8ie/LV7FlD5I0cF4XD/9SSyxhGtu+8k5ewCO6StoFyeBD46PZbduonh1tc7PgOyCXI7YZBfd5ywHnMSddJyiv6UpEubj43ozQlJM5YVp6zpeQQYpZ0ZFvuAcY2tVqnXgeGLm5eaWdpnWUph2yimX5unM/rqgNa/C21BLejZ3ax2WA+olkUbQDKQyFdD0GjJR5BF3L/F+QuUg7fWaRrDDqWaZ5QMWIvku56yKovoVtcF2HJuCh8spoX8Jfc2oPNpNxL7RXRLDMUjEOB85nSOFnutIw0/nvt7DPggODTFEP/rQtX+BohvEm5sZfLyXIAHCnX0lHZeyY74QB/BeFKUn6bOo3mmRAU/+RWYQb+O1KodSpNDf97B1EqQ83/9qR5TwvUQV5/BXEQcth9oNBm8nUn/jswHUJoyXJTLBfX5D0zOFOon7MqAgczK8LElDb1KKgDlCGtW+e7jvrraMCqvYqnwzi2Rz63eYILNecdaRnaU0H46eMUimJ12k4x687bqo8dAsqKwxkEjvXSH0Ds0TDR4C1Xk3FscPQ3985v9gPOqdVJHkxxxsQMCM1KAG4zyd/WaUdxM7lfk6Q4nS4=
