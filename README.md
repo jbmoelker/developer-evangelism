@@ -1,6 +1,9 @@
 # Developer Evangelism
 
-Copy of [developer-evangelism.com](http://developer-evangelism.com).
+[jbmoelker.github.io/developer-evangelism](https://jbmoelker.github.io/developer-evangelism/) is a copy of [developer-evangelism.com](http://developer-evangelism.com),
+enhanced into a responsive, installable, offline available handbook.
+
+[![Travis Build Status](https://travis-ci.org/jbmoelker/developer-evangelism.svg)](https://travis-ci.org/jbmoelker/developer-evangelism/builds)
 
 ## Setup
 
