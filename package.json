@@ -15,14 +15,19 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": [
-    { "name": "Jasper Moelker", "email": "jasper@voorhoede.nl", "url": "https://twitter.com/jbmoelker" }
+    {
+      "name": "Jasper Moelker",
+      "email": "jasper@voorhoede.nl",
+      "url": "https://twitter.com/jbmoelker"
+    }
   ],
   "license": "MIT",
   "devDependencies": {
     "bluebird": "3.1.1",
+    "change-case": "2.3.1",
     "commitizen": "2.5.0",
     "cz-conventional-changelog": "1.1.5",
-    "favicons": "4.4.5",
+    "favicons": "4.5.2",
     "http-server": "0.8.5",
     "mkdirp": "0.5.1",
     "nunjucks": "2.3.0",

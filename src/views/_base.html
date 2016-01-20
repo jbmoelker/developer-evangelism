@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>{% block title %}Developer Evangelism{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="{{ root }}manifest.json">
+    {% include "components/favicons/favicons.html" %}{# favicons need to be set explicitely as served from sub dir on gh-pages #}
     {% block styles %}
     <style>{% include "index.css" %}</style>
     {% endblock %}
