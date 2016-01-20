@@ -19,8 +19,6 @@ Read the setup above, make atomic commits, create PRs for single purpose feature
 
 ## To do
 
-* Add favicons and other device icons.
 * Make available offline using Service Worker.
-* Make installable using Manifest.
 * Fetch remaining content (intro, about, donate, footer, images).
 * Style app.
