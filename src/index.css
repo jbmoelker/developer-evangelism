@@ -8,6 +8,29 @@ body {
 .app-header {
     border-bottom: 1px solid black;
 }
+.app-header:before {
+    content: "DE"; // "{✝}";
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 40px;
+    height: 46px;
+    float: left;
+    background-color: #F1DC3F;
+    margin: 2px 10px 0 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 2px 6px;
+    font-family: Arial, sans-serif;
+}
+.app-header__title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.app-header__tagline {
+    margin: .5rem 0;
+    font-size: .9rem;
+}
 
 .app-footer {
     border-top: 1px solid black;
