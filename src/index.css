@@ -9,7 +9,7 @@ body {
     border-bottom: 1px solid black;
 }
 .app-header:before {
-    content: "DE"; // "{✝}";
+    content: "DE"; /*"{✝}";*/
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
