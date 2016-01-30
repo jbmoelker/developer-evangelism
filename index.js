@@ -17,7 +17,8 @@ function createApp() {
     return Promise.all([
         createAll(),
         createAboutPage(),
-        createIntroPage()
+        createIntroPage(),
+        create404()
     ]);
 }
 
@@ -50,6 +51,11 @@ function createIntroPage() {
 function createPage(item) {
     return scraper.fetchPage(item)
         .then(page => renderPage(page));
+}
+
+function create404() {
+    return renderer.render('views/404.html', { root: '../' })
+        .then(html => saveFile(`${paths.dist}404/index.html`, html));
 }
 
 function renderPage(page) {

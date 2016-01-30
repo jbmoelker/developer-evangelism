@@ -5,6 +5,13 @@
 {% block content %}
     <article>
         {#<h1>{{ page.title }}</h1>#}
+
+        <label class="offline-widget" data-offline-widget>
+            <input type="checkbox" value="{{ page.slug }}/" disabled data-offline-switch>
+            Save offline
+            <span class="offline-info" data-offline-info></span>
+        </label>
+
         {{ page.body | safe }}
     </article>
 {% endblock %}

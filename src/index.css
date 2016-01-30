@@ -5,6 +5,17 @@ body {
     padding: 1em;
 }
 
+.a11y-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 .app-header {
     border-bottom: 1px solid black;
 }
@@ -36,9 +47,18 @@ body {
     border-top: 1px solid black;
 }
 
-.toc ol {
-    list-style: none;
-    padding-left: 0;
+.toc {
+    margin-bottom: 2rem;
+}
+.toc h1 {
+    margin-bottom: 0;
+}
+.toc thead th {
+    font-weight: normal;
+    text-align: center;
+}
+.toc td:last-child {
+    text-align: center;
 }
 .toc a {
     display: inline-block;
@@ -49,4 +69,18 @@ body {
 .tip {
     padding: 1em;
     border: 1px solid lightgray;
+}
+
+.offline-widget {
+    display: block;
+    margin: 1rem 0;
+}
+.offline-info:empty {
+    color: white;
+}
+.offline-info {
+    color: lightgray;
+    font-size: .9em;
+    font-style: italic;
+    transition: color .2s;
 }

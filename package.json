@@ -7,11 +7,13 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rm -rf ./dist",
-    "build": "npm run build:html && npm run build:favicons",
-    "build:html": "node ./index.js",
+    "build": "npm run build:html && npm run build:js && npm run build:sw && npm run build:favicons",
     "build:favicons": "node ./lib/favicons.js",
+    "build:html": "node ./index.js",
+    "build:js": "cp ./src/index.js ./dist/index.js",
+    "build:sw": "cp ./src/sw.js ./dist/sw.js",
     "commit": "git-cz",
-    "start": "http-server 'dist/' -c-1 -o",
+    "start": "http-server 'dist/' -c-1 -o -p 38244",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": [
