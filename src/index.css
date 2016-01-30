@@ -45,6 +45,11 @@ body {
 
 .app-footer {
     border-top: 1px solid black;
+    padding-top: .5rem;
+}
+.app-footer img {
+    float: left;
+    margin: 0 8px 5px 0;
 }
 
 .toc {
@@ -55,7 +60,8 @@ body {
 }
 .toc thead th {
     font-weight: normal;
-    text-align: center;
+    text-align: left;
+    vertical-align: bottom;
 }
 .toc td:last-child {
     text-align: center;
