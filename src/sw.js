@@ -50,7 +50,7 @@ self.addEventListener('fetch', function(event) {
         })
         .catch(function() {
             if (isHtmlRequest(event.request)) {
-                return caches.match('/404/');
+                return caches.match('./404/');
             } else {
                 console.log('couldn\'t get response for', event.request.url);
             }

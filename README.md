@@ -19,6 +19,6 @@ Read the setup above, make atomic commits, create PRs for single purpose feature
 
 ## To do
 
-* Make available offline using Service Worker.
+* Add "save all offline" option on home page.
 * Fetch remaining content (footer, images).
 * Style app.
