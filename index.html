@@ -37,6 +37,17 @@
     padding: 1em;
 }
 
+.a11y-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 .app-header {
     border-bottom: 1px solid black;
 }
@@ -68,9 +79,18 @@
     border-top: 1px solid black;
 }
 
-.toc ol {
-    list-style: none;
-    padding-left: 0;
+.toc {
+    margin-bottom: 2rem;
+}
+.toc h1 {
+    margin-bottom: 0;
+}
+.toc thead th {
+    font-weight: normal;
+    text-align: center;
+}
+.toc td:last-child {
+    text-align: center;
 }
 .toc a {
     display: inline-block;
@@ -81,6 +101,20 @@
 .tip {
     padding: 1em;
     border: 1px solid lightgray;
+}
+
+.offline-widget {
+    display: block;
+    margin: 1rem 0;
+}
+.offline-info:empty {
+    color: white;
+}
+.offline-info {
+    color: lightgray;
+    font-size: .9em;
+    font-style: italic;
+    transition: color .2s;
 }</style>
     
 </head>
@@ -88,87 +122,278 @@
 <body>
 <header role="banner" class="app-header">
     <h1 class="app-header__title"><a href="">Developer Evangelism</a></h1>
-    <p class="app-header__tagline">Content copied from <a href="http://developer-evangelism.com/">developer-evangelism.com</a> by <a href="https://twitter.com/codepo8">Chris Heilmann</a></p>
+    <p class="app-header__tagline">Content from <a href="http://developer-evangelism.com/">developer-evangelism.com</a> by <a href="https://twitter.com/codepo8">Chris Heilmann</a></p>
 </header>
 
 <main role="main">
     
     <nav class="toc">
         <h1>Table of contents</h1>
-        <ol>
-            <li><a href="./introduction/">Introduction</a></li>
-            <li><a href="./about/">About</a></li>
+        <table>
+            <thead>
+                <th><span class="a11y-only">chapters</span></th>
+                <th>cached?</th>
+            </thead>
+            <tbody>
             
-            <li>
-                <a href="./handbook/">The developer evangelism handbook</a>
-            </li>
+    <tr>
+        <td>
+            <a href="./introduction/">Introduction</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="introduction/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./brand-and-competition/">Remove the brand</a>
-            </li>
+    <tr>
+        <td>
+            <a href="./about/">About</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="about/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./internal/">Work with your own company</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./handbook/">The developer evangelism handbook</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="handbook/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./outreach/">Prepare for outreach</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./brand-and-competition/">Remove the brand</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="brand-and-competition/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./travel-confs/">Travel and conference participation</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./internal/">Work with your own company</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="internal/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./speaking-opportunities/">Get speaking opportunities</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./outreach/">Prepare for outreach</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="outreach/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./delivery/">Deliver a talk or workshop</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./travel-confs/">Travel and conference participation</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="travel-confs/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./time/">How to keep a talk on time</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./speaking-opportunities/">Get speaking opportunities</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="speaking-opportunities/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./writing/">Write great posts and articles</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./delivery/">Deliver a talk or workshop</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="delivery/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./code/">Write excellent code examples</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./time/">How to keep a talk on time</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="time/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./slides/">Prepare great slide decks for presentations</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./writing/">Write great posts and articles</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="writing/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./record/">Record your output</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./code/">Write excellent code examples</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="code/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./web/">Know and use the (social) web</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./slides/">Prepare great slide decks for presentations</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="slides/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./conferences/">Work with the conference buzz</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./record/">Record your output</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="record/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./tips/">Additional presentation tips</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./web/">Know and use the (social) web</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="web/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-            <li>
-                <a href="./thanks/">Thanks!</a>
-            </li>
+                
+    <tr>
+        <td>
+            <a href="./conferences/">Work with the conference buzz</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="conferences/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
             
-        </ol>
+                
+    <tr>
+        <td>
+            <a href="./tips/">Additional presentation tips</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="tips/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
+            
+                
+    <tr>
+        <td>
+            <a href="./thanks/">Thanks!</a>
+        </td>
+        <td>
+            <label data-offline-widget>
+                <input type="checkbox" value="thanks/" disabled data-offline-switch>
+                <span class="a11y-only">save offline</span>
+            </label>
+        </td>
+    </tr>
+
+            
+            </tbody>
+        </table>
     </nav>
 
 
     
 </main>
+
 
 <footer role="contentinfo" class="app-footer">
     
@@ -182,11 +407,15 @@
 </footer>
 
 
+
 <script>
-(function(){
-    
-}());
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js', { scope: '' })
+            .then(function(reg){ console.log('registered sw, scoped to', reg.scope); })
+            .catch(function(err){ console.error('error registering sw', err); });
+    }
 </script>
+<script src="index.js"></script>
 
 </body>
 </html>

@@ -37,6 +37,17 @@
     padding: 1em;
 }
 
+.a11y-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 .app-header {
     border-bottom: 1px solid black;
 }
@@ -68,9 +79,18 @@
     border-top: 1px solid black;
 }
 
-.toc ol {
-    list-style: none;
-    padding-left: 0;
+.toc {
+    margin-bottom: 2rem;
+}
+.toc h1 {
+    margin-bottom: 0;
+}
+.toc thead th {
+    font-weight: normal;
+    text-align: center;
+}
+.toc td:last-child {
+    text-align: center;
 }
 .toc a {
     display: inline-block;
@@ -81,6 +101,20 @@
 .tip {
     padding: 1em;
     border: 1px solid lightgray;
+}
+
+.offline-widget {
+    display: block;
+    margin: 1rem 0;
+}
+.offline-info:empty {
+    color: white;
+}
+.offline-info {
+    color: lightgray;
+    font-size: .9em;
+    font-style: italic;
+    transition: color .2s;
 }</style>
     
 </head>
@@ -88,13 +122,20 @@
 <body>
 <header role="banner" class="app-header">
     <h1 class="app-header__title"><a href="../">Developer Evangelism</a></h1>
-    <p class="app-header__tagline">Content copied from <a href="http://developer-evangelism.com/">developer-evangelism.com</a> by <a href="https://twitter.com/codepo8">Chris Heilmann</a></p>
+    <p class="app-header__tagline">Content from <a href="http://developer-evangelism.com/">developer-evangelism.com</a> by <a href="https://twitter.com/codepo8">Chris Heilmann</a></p>
 </header>
 
 <main role="main">
     
     <article>
         
+
+        <label class="offline-widget" data-offline-widget>
+            <input type="checkbox" value="internal/" disabled data-offline-switch>
+            Save offline
+            <span class="offline-info" data-offline-info></span>
+        </label>
+
         <h2 id="owncompany">Work with your own company</h2>
 
 <p>As a developer evangelist you will find that a large part of your work is dealing with internal developers and unpredictable changes to your company.</p>
@@ -216,6 +257,7 @@
     
 </main>
 
+
 <footer role="contentinfo" class="app-footer">
     
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/2.0/uk/88x31.png"></a>
@@ -228,11 +270,15 @@
 </footer>
 
 
+
 <script>
-(function(){
-    
-}());
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../sw.js', { scope: '../' })
+            .then(function(reg){ console.log('registered sw, scoped to', reg.scope); })
+            .catch(function(err){ console.error('error registering sw', err); });
+    }
 </script>
+<script src="../index.js"></script>
 
 </body>
 </html>
