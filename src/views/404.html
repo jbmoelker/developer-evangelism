@@ -1,0 +1,16 @@
+{% extends "views/_base.html" %}
+
+{% block title %}Page not found{% endblock %}
+
+{% block content %}
+    <article>
+        <h1>Page not found</h1>
+        <p>
+            This might be because you're offline.
+            <a href="{{ root }}">Go back to the homepage</a>
+            to see which pages are available offline.
+        </p>
+    </article>
+{% endblock %}
+
+{% block appFooter %}{% endblock %}

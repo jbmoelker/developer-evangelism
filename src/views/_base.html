@@ -13,7 +13,7 @@
 <body>
 <header role="banner" class="app-header">
     <h1 class="app-header__title"><a href="{{ root }}">Developer Evangelism</a></h1>
-    <p class="app-header__tagline">Content copied from <a href="http://developer-evangelism.com/">developer-evangelism.com</a> by <a href="https://twitter.com/codepo8">Chris Heilmann</a></p>
+    <p class="app-header__tagline">Content from <a href="http://developer-evangelism.com/">developer-evangelism.com</a> by <a href="https://twitter.com/codepo8">Chris Heilmann</a></p>
 </header>
 
 <main role="main">
@@ -22,6 +22,7 @@
     {#<aside>Donate...</aside>#}
 </main>
 
+{% block appFooter %}
 <footer role="contentinfo" class="app-footer">
     {# fetch from developer-evangelism instead of hard-coded #}
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/2.0/uk/88x31.png"></a>
@@ -32,13 +33,17 @@
     Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://developer-evangelism.com" rel="dc:source">developer-evangelism.com</a>. Icons by <a href="http://www.famfamfam.com/lab/icons/silk/">FamFamFam</a>.
     <a href="http://twitter.com/codepo8" id="twitter">I answer on Twitter!</a>
 </footer>
+{% endblock %}
 
 {% block scripts %}
 <script>
-(function(){
-    {% include "index.js" %}
-}());
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('{{ root }}sw.js', { scope: '{{ root }}' })
+            .then(function(reg){ console.log('registered sw, scoped to', reg.scope); })
+            .catch(function(err){ console.error('error registering sw', err); });
+    }
 </script>
+<script src="{{ root }}index.js"></script>
 {% endblock %}
 </body>
 </html>
